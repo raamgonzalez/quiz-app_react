@@ -16,7 +16,7 @@ const config = {
   width: "10px",
   height: "10px",
   perspective: "500px",
-  colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"]
+  colors: ["#0022e2", "#495ca4", "#efe7e6",]
 };
 
 return <Confetti active={ someProp } config={ config }/>

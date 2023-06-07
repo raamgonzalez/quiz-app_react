@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import { useEffect } from 'react'
-import useReplace from './hook/getReplace'
+import useReplace from './hook/useReplace'
 import Spinner from './components/Spinner'
 import  ConfettiExplosion from  'react-confetti-explosion' ;
 
@@ -52,10 +52,10 @@ function App() {
 
 	const mediumProps = {
 		force: 0.6,
-		duration: 2500,
-		particleCount: 100,
-		width: 1000,
-		colors: ['#FF0000', '#008000', '#800080', '#FFFF00', '#000080'],
+		duration: 2000,
+		particleCount: 40,
+		width: 2000,
+		colors: ['#FF0000',"#0022e2", "#495ca4", "#efe7e6",],
 	};
 
 
