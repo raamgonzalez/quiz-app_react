@@ -8,5 +8,6 @@ export default function useReplace(htmlStr) {
 	htmlStr = htmlStr.replace(/&ldquo;/g , '“');
 	htmlStr = htmlStr.replace(/&ldquo;/g , "'");
 	htmlStr = htmlStr.replace(/&iuml;/g , 'Ï');
+	htmlStr = htmlStr.replace(/&rdquo;/g , '”');
 	return htmlStr;     
 }
