@@ -94,11 +94,11 @@ if (loading) return <Spinner/>
 						{correctAnswer && <ConfettiExplosion  {...mediumProps}/>}
 					</section>
 				</div>
-				<div className="absolute bottom-10 left-[600px] flex">
+				<div className="invisible md:visible md:absolute md:bottom-10 md:left-[600px] md:flex">
 					<p>Quiz:</p>
 					<p>{nextQuestion+1}-10</p>
 				</div>
-				<div className="absolute bottom-0 left-[600px] flex">
+				<div className="invisible md:visible md:absolute md:bottom-0 md:left-[600px] md:flex">
 					<p>Points:</p>
 					<p>{points}</p>
 				</div>
@@ -137,12 +137,3 @@ if (loading) return <Spinner/>
 
 export default App
 
-
-// )
-// 				:
-// 				(
-// 				<section className='w-screen flex flex-row justify-center'>
-// 					<button className='btn btn-success' onClick={getQuestions()}>Replay</button>
-// 				</section>
-// 				)
-// 				}
