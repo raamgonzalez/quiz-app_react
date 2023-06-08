@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import useReplace from './hook/useReplace'
 import Spinner from './components/Spinner'
 import  ConfettiExplosion from  'react-confetti-explosion' ;
+import Footer from './components/Footer'
 
 
 const API_URL ='https://opentdb.com/api.php?amount=10&Don%27t%20forget%20that%20%CF%80%20%3D%203.14%20%26%20doesn%27t%20equal%203.'
@@ -88,7 +89,7 @@ if (loading) return <Spinner/>
 					<section className='flex max-h-96 flex-row gap-2 flex-wrap place-content-center items-center relative'>
 						{
 							getRandomAnswers().map((answer, index) => {
-								return <button onClick={() => { handleNextQuestion(), handleCheckAnswer(answer)}}  className="btn w-96 shadow-md"  key={index}>{useReplace(answer)}</button>
+								return <button onClick={() => { handleNextQuestion(), handleCheckAnswer(answer)}}  className="btn w-64 md:w-96 shadow-md"  key={index}>{useReplace(answer)}</button>
 							})
 						}
 						{correctAnswer && <ConfettiExplosion  {...mediumProps}/>}
@@ -125,12 +126,13 @@ if (loading) return <Spinner/>
 					<div className='absolute top-2 icon ddr2'>?</div>
 				</div>
 				<section className='w-screen h-full flex justify-center text-center'>
-					<section className='container w-[800px] filter saturate-200  shadow-xl px-10 py-5 rounded-2xl min-h-[600px] flex flex-col justify-center items-center'>
+					<section className='container px-5 py-3 md:w-[800px] filter saturate-200  shadow-xl md:px-10 md:py-5 rounded-2xl min-h-[600px] flex flex-col justify-center items-center'>
 					{nextQuestion === 10 
 					? <Final/> 
 					:<Quiz/>}
 					</section>
 				</section>
+				<Footer/>
 			</section>
 	)
 }
